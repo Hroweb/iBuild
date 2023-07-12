@@ -4,10 +4,15 @@
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
 
+import _ from 'lodash';
 import axios from 'axios';
+window._ = _;
+
 window.axios = axios;
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+window.axios.defaults.baseURL = import.meta.env.VITE_APP_URL
+window.axios.defaults.withCredentials = true;
 
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
