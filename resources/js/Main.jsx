@@ -3,7 +3,7 @@ import React from 'react'
 const Main = () => {
   return (
     <div className='container'>
-        <h1>Hello Anahit</h1>
+        <h1>Frontend entry</h1>
     </div>
   )
 }
